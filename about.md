@@ -15,4 +15,6 @@ title: 关于
 - 话题性识别 + PFE 推理管线 + 语义场
 - 目标：下载即用、无需 API key，在 ARM 板子上自主运行
 
+当前版本：**v0.5.7**（[GitHub](https://github.com/afd-ll/PivotMind)）——词层语义场 + 话题性生成 + PFE 推理管线
+
 这个博客记录开发过程、架构思考与踩坑笔记。

@@ -11,6 +11,10 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
+# RSS 订阅（GitHub Pages 内置支持 jekyll-feed）
+plugins:
+  - jekyll-feed
+
 # 社交链接（GitHub 主页）
 github_username: afd-ll
 
