@@ -1,3 +1,7 @@
+---
+---
+@import "minima";
+
 // ═══════════════════════════════════════════════════════════
 // 亮色现代风格（覆盖 minima 默认主题）
 // 白底 + 卡片 + 大标题，清爽优雅
@@ -14,11 +18,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-// 页头：白底 + 细分割线
+// 页头：白底 + 细分割线 + 顶部强调色条
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #e6e8eb;
-  border-top: 4px solid #4f46e5;   // 顶部强调色条
+  border-top: 4px solid #4f46e5;
 }
 
 .site-title {
@@ -32,23 +36,20 @@ body {
   &:hover { text-decoration: none; }
 }
 
-.site-nav {
-  .page-link {
-    color: #4b5563;
-    font-weight: 500;
-    &:hover { color: #4f46e5; text-decoration: none; }
-  }
+.site-nav .page-link {
+  color: #4b5563;
+  font-weight: 500;
+  &:hover { color: #4f46e5; text-decoration: none; }
 }
 
 // 内容区
 .page-content { padding-top: 2.6rem; padding-bottom: 3rem; }
 
-// 首页大标题（index.md 渲染的 h1 + 首段副标题）
+// 首页大标题（index.md 渲染的 h1）+ 副标题首段
 .home h1 {
   font-size: 2.4rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #111827;
   margin-bottom: 1rem;
   background: linear-gradient(120deg, #111827, #4f46e5);
   -webkit-background-clip: text;
@@ -76,7 +77,6 @@ body {
     padding: 1.4rem 1.6rem;
     margin-bottom: 1.1rem;
     transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-
     &:hover {
       box-shadow: 0 6px 16px rgba(17, 24, 39, 0.08);
       transform: translateY(-2px);
@@ -93,16 +93,8 @@ body {
     &:hover { color: #4f46e5; text-decoration: none; }
   }
 
-  .post-meta {
-    color: #9ca3af;
-    font-size: 0.85rem;
-  }
-
-  .post-excerpt {
-    color: #4b5563;
-    margin-top: 0.5rem;
-    font-size: 0.95rem;
-  }
+  .post-meta { color: #9ca3af; font-size: 0.85rem; }
+  .post-excerpt { color: #4b5563; margin-top: 0.5rem; font-size: 0.95rem; }
 }
 
 // 文章页
@@ -115,23 +107,14 @@ body {
     line-height: 1.3;
     margin-bottom: 0.4rem;
   }
-  .post-meta {
-    color: #9ca3af;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-  }
+  .post-meta { color: #9ca3af; font-size: 0.9rem; margin-bottom: 2rem; }
 }
 
 .post-content {
   font-size: 1.02rem;
   color: #1f2933;
 
-  h1, h2, h3 {
-    font-weight: 700;
-    color: #111827;
-    margin-top: 2.2rem;
-    letter-spacing: -0.01em;
-  }
+  h1, h2, h3 { font-weight: 700; color: #111827; margin-top: 2.2rem; letter-spacing: -0.01em; }
   h2 { font-size: 1.55rem; border-bottom: 1px solid #eef0f3; padding-bottom: 0.4rem; }
   h3 { font-size: 1.25rem; }
 
@@ -148,7 +131,6 @@ body {
 
   img { border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
 
-  // 代码块：亮色 + 圆角
   pre.highlight {
     background: #f8fafc;
     border: 1px solid #e6e8eb;
@@ -180,9 +162,9 @@ body {
   a { color: #6b7280; &:hover { color: #4f46e5; } }
 }
 
-// 响应式微调
+// 响应式
 @include media-query($on-palm) {
   .post-list .post-link { font-size: 1.1rem; }
   .post-header .post-title { font-size: 1.7rem; }
-  .home-title { font-size: 1.8rem; }
+  .home h1 { font-size: 1.8rem; }
 }
