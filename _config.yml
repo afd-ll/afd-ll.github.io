@@ -1,0 +1,18 @@
+title: afd-ll 的技术博客
+description: >-
+  玄枢（PivotMind）仿脑认知引擎的开发笔记 —— 纯 C、零依赖、14 脑区、
+  12 层拓扑网络，目标在 ARM 板子上自主运行。
+author: afd-ll
+# GitHub Pages 默认主题（不需要本地安装）
+theme: minima
+
+# 构建配置
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# 社交链接（GitHub 主页）
+github_username: afd-ll
+
+# 时间格式
+date_format: "%Y-%m-%d"
