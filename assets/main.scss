@@ -162,7 +162,22 @@ body {
   a { color: #6b7280; &:hover { color: #4f46e5; } }
 }
 
-// 响应式
+// 分类徽章（按 site.lang 显示英文/中文）
+.post-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin-left: 0.4rem;
+  vertical-align: 1px;
+  &.dev-notes { background: #eef2ff; color: #4f46e5; }
+  &.musings { background: #fdf3e3; color: #c9a227; }
+  &.intro { background: #e8f7ef; color: #2e8b57; }
+  &.misc { background: #f3f4f6; color: #6b7280; }
+}
+
+// 响应式微调
 @include media-query($on-palm) {
   .post-list .post-link { font-size: 1.1rem; }
   .post-header .post-title { font-size: 1.7rem; }

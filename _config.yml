@@ -1,4 +1,5 @@
 title: afd-ll 的技术博客
+lang: en   # 站点语言：en=分类显示英文, zh=中文
 description: >-
   玄枢（PivotMind）仿脑认知引擎的开发笔记 —— 纯 C、零依赖、14 脑区、
   12 层拓扑网络，目标在 ARM 板子上自主运行。
