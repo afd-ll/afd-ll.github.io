@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [intro]
 title: "PivotMind: A 'Toy' Aiming for AGI"
 date: 2026-08-02
 description: "An interview with Daoxiang Chen (cx), the creator of PivotMind — a pure-C, zero-dependency brain-inspired cognitive engine running on a $20 ARM board"

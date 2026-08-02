@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [musings]
 title: "Awakening: How Self-Awareness Emerges"
 date: 2026-08-02
 description: "Author's musings #1 — how a child's 'awakening' reveals that the self is not innate but inferred from action-result causality, and what it means for building a brain-inspired AI without a body"

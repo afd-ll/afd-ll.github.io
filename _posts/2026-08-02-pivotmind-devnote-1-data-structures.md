@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [dev-notes]
 title: "Slicing the Brain: PivotMind's Core Data Structures"
 date: 2026-08-02
 description: "PivotMind development note #1 — dissecting the C structs at the heart of a pure-C brain-inspired engine: nodes, edges, hash indexes, and why they're designed this way"

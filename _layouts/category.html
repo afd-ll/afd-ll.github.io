@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">{{ page.title }}</h1>
+
+  <ul class="post-list">
+    {% assign posts = site.categories[page.category] | sort: 'date' | reverse %}
+    {% for post in posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        {% if post.description %}
+          <span class="post-excerpt">{{ post.description }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if posts.size == 0 %}
+    <p>该分类暂无文章。</p>
+  {% endif %}
+
+  {{ content }}
+</div>
