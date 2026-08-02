@@ -2,10 +2,10 @@
 layout: post
 title: "PivotMind: A 'Toy' Aiming for AGI"
 date: 2026-08-02
-description: "An interview with Chen Daoxiang (cx), the creator of PivotMind — a pure-C, zero-dependency brain-inspired cognitive engine running on a $20 ARM board"
+description: "An interview with Daoxiang Chen (cx), the creator of PivotMind — a pure-C, zero-dependency brain-inspired cognitive engine running on a $20 ARM board"
 ---
 
-*An interview with **Chen Daoxiang (cx)**, a third-year undergraduate student in China and the creator of PivotMind (玄枢) — a pure-C, zero-dependency brain-inspired cognitive engine with 14 brain regions and a 12-layer topology network, running on a 140-yuan ARM development board.*
+*An interview with **Daoxiang Chen (cx)**, a third-year undergraduate student in China and the creator of PivotMind (玄枢) — a pure-C, zero-dependency brain-inspired cognitive engine with 14 brain regions and a 12-layer topology network, running on a 140-yuan ARM development board.*
 
 ---
 
