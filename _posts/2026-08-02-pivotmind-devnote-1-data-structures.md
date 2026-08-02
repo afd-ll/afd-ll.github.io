@@ -142,7 +142,7 @@ typedef struct SubTopology {
 
 ## 3. The Master: The Nested Skeleton of 12 Topologies
 
-The master topology is where the "Suzhi Network" (溯智网络 — nested multi-topology) idea lands:
+The master topology is where the "TraceWisdom Network" (溯智网络 — nested multi-topology) idea lands:
 
 ```c
 typedef struct MasterTopology {

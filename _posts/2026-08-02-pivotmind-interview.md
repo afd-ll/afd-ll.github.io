@@ -23,15 +23,15 @@ Back then, it was only a vague idea, with no clear path to realization.
 
 One evening, while scrolling through short videos, I happened upon a science video about Huarong Dao (a sliding-puzzle game) — specifically, its topology graph structure. In that instant, everything clicked: isn't a topology graph the natural mapping of the human brain? Nodes are neurons, edges are synapses, and traversing an edge is signal transmission. If you want to build an AI that understands logic, you must move toward a biomimetic direction — and a topology graph is the natural brain-like structure.
 
-But on deeper thought, a single topology graph has fundamental flaws: cluttered content, chaotic structure, inefficient traversal, and severe noise pollution. That led me to create the **"Suzhi Network" (溯智网络)** — a nested multi-topology architecture: a master topology containing sub-topologies, each of which contains nested child topologies. The system first performs intent parsing; each child topology computes a local optimum, then the master topology reconciles them into a global optimum and outputs the answer. This was the very early model foundation — and that's where the name "Suzhi Network" came from.
+But on deeper thought, a single topology graph has fundamental flaws: cluttered content, chaotic structure, inefficient traversal, and severe noise pollution. That led me to create the **"TraceWisdom Network" (溯智网络)** — a nested multi-topology architecture: a master topology containing sub-topologies, each of which contains nested child topologies. The system first performs intent parsing; each child topology computes a local optimum, then the master topology reconciles them into a global optimum and outputs the answer. This was the very early model foundation — and that's where the name "TraceWisdom Network" came from.
 
-## Suzhi: Letting Intelligence See Its Own Reasoning Path
+## TraceWisdom: Letting Intelligence See Its Own Reasoning Path
 
-**Q: What does "Suzhi" (溯智) mean?**
+**Q: What does "TraceWisdom" (溯智) mean?**
 
-Suzhi means **reasoning-path visualization** — the intelligent system can observe how it traverses its own connections, and when a result deviates, it can pinpoint exactly which node the deviation started from. That is the essence of Suzhi.
+TraceWisdom means **reasoning-path visualization** — the intelligent system can observe how it traverses its own connections, and when a result deviates, it can pinpoint exactly which node the deviation started from. That is the essence of TraceWisdom.
 
-Suzhi Network is the architecture, similar to how "LLM" is an architecture. PivotMind (玄枢) is the concrete model built on top of that architecture — comparable to how DeepSeek is a specific model built on its underlying architecture.
+TraceWisdom Network is the architecture, similar to how "LLM" is an architecture. PivotMind (玄枢) is the concrete model built on top of that architecture — comparable to how DeepSeek is a specific model built on its underlying architecture.
 
 **Q: Where did the name "Xuan Shu" come from?**
 
