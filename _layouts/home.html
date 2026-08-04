@@ -3,35 +3,64 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  <!-- Hero 区：身份定位 + 主标题 + CTA（中英双语，JS 切换） -->
+  <section class="hero">
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">{{ site.data.i18n.hero[site.lang].eyebrow }}</p>
+    <h1 class="hero-title" data-i18n="hero.title">{{ site.data.i18n.hero[site.lang].title }}</h1>
+    <p class="hero-desc" data-i18n="hero.desc">{{ site.data.i18n.hero[site.lang].desc }}</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#posts" data-i18n="hero.cta_read">{{ site.data.i18n.hero[site.lang].cta_read }}</a>
+      <a class="btn btn-secondary" href="{{ '/about/' | relative_url }}" data-i18n="hero.cta_about">{{ site.data.i18n.hero[site.lang].cta_about }}</a>
+    </div>
+  </section>
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        {%- assign post_cat = post.categories | first -%}
-        {%- assign cat_name = site.data.categories[post_cat][site.lang] | default: post_cat -%}
-        {%- if post_cat -%}
-          <span class="post-badge {{ post_cat }}">{{ cat_name }}</span>
+  <!-- Featured 精选卡片：4 篇代表内容 -->
+  {%- assign featured_slugs = "pivotmind-interview,pivotmind-devnote-1-data-structures,pivotmind-devnote-5-knowledge-survival,pivotmind-musings-1-awakening" | split: "," -%}
+  <section class="featured">
+    <h2 class="featured-title" data-i18n="featured.title">{{ site.data.i18n.featured[site.lang].title }}</h2>
+    <div class="featured-grid">
+      {%- for slug in featured_slugs -%}
+        {%- assign fpost = site.posts | where: "slug", slug | first -%}
+        {%- if fpost -%}
+        <a class="featured-card" href="{{ fpost.url | relative_url }}">
+          {%- assign fcat = fpost.categories | first -%}
+          {%- assign fcat_name = site.data.i18n.categories[site.lang][fcat] | default: fcat -%}
+          <span class="post-badge {{ fcat }}">{{ fcat_name }}</span>
+          <h3>{{ fpost.title | escape }}</h3>
+          <p>{{ fpost.excerpt | strip_html | truncate: 80 }}</p>
+        </a>
         {%- endif -%}
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
       {%- endfor -%}
-    </ul>
-  {%- endif -%}
+    </div>
+  </section>
 
+  <!-- 全部文章列表 -->
+  {%- if site.posts.size > 0 -%}
+    <section id="posts">
+      <h2 class="post-list-heading" data-i18n="featured.all_posts">{{ site.data.i18n.featured[site.lang].all_posts }}</h2>
+      <ul class="post-list">
+        {%- for post in site.posts -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          {%- assign post_cat = post.categories | first -%}
+          {%- assign cat_name = site.data.i18n.categories[site.lang][post_cat] | default: post_cat -%}
+          {%- if post_cat -%}
+            <span class="post-badge {{ post_cat }}">{{ cat_name }}</span>
+          {%- endif -%}
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+  {%- endif -%}
 </div>

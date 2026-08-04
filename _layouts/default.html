@@ -1,0 +1,17 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body>
+    {%- include header.html -%}
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+    {%- include footer.html -%}
+    {%- include i18n-data.html -%}
+    <script src="{{ '/assets/js/i18n.js' | relative_url }}"></script>
+  </body>
+</html>

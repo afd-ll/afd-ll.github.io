@@ -1,0 +1,7 @@
+---
+# 把 i18n 数据输出到前端（JS 切换用）
+---
+<script>
+  window.SITE_I18N = {{ site.data.i18n | jsonify }};
+  window.SITE_LANG = "{{ site.lang }}";
+</script>

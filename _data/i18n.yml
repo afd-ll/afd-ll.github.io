@@ -1,0 +1,47 @@
+# 站点 UI 文案中英对照（v0.5.7 双语切换）
+# site.lang 控制默认语言；JS 切换后 localStorage 覆盖
+
+nav:
+  en:
+    tech: "Dev Notes"
+    musings: "Musings"
+    about: "About"
+  zh:
+    tech: "技术拆解"
+    musings: "作者杂谈"
+    about: "关于"
+
+hero:
+  en:
+    eyebrow: "COGNITIVE ARCHITECTURE · EDGE INTELLIGENCE · SYSTEMS ENGINEERING"
+    title: "Let intelligence grow out of data"
+    desc: "PivotMind (玄枢) — a pure-C, zero-dependency brain-inspired cognitive engine. 14 brain regions, 12 nested topology layers, no dictionary, no API keys. Building an AGI-oriented 'toy' from first principles on an ARM board."
+    cta_read: "Start Reading"
+    cta_about: "About Me"
+  zh:
+    eyebrow: "认知架构 · 边缘智能 · 系统工程"
+    title: "让智能从数据里自己长出来"
+    desc: "PivotMind（玄枢）—— 纯 C、零依赖的类脑认知引擎。14 个脑区、12 层嵌套拓扑、不装词库、无需 API Key。在一张 ARM 板子上，从第一性原理搭建一个奔着 AGI 去的「玩具」。"
+    cta_read: "开始阅读"
+    cta_about: "关于我"
+
+featured:
+  en:
+    title: "Featured"
+    all_posts: "All Posts"
+  zh:
+    title: "精选"
+    all_posts: "全部文章"
+
+# 分类徽章（整合原 categories.yml）
+categories:
+  en:
+    dev-notes: "Dev Notes"
+    musings: "Musings"
+    intro: "Intro"
+    misc: "Misc"
+  zh:
+    dev-notes: "技术拆解"
+    musings: "作者杂谈"
+    intro: "开篇"
+    misc: "杂项"
