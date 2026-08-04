@@ -5,10 +5,12 @@ nav:
   en:
     tech: "Dev Notes"
     musings: "Musings"
+    snapshots: "Status Snapshots"
     about: "About"
   zh:
     tech: "技术拆解"
     musings: "作者杂谈"
+    snapshots: "状态快照"
     about: "关于"
 
 hero:
@@ -38,10 +40,12 @@ categories:
   en:
     dev-notes: "Dev Notes"
     musings: "Musings"
+    snapshots: "Status Snapshots"
     intro: "Intro"
     misc: "Misc"
   zh:
     dev-notes: "技术拆解"
     musings: "作者杂谈"
+    snapshots: "状态快照"
     intro: "开篇"
     misc: "杂项"

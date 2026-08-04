@@ -10,3 +10,6 @@ intro:
 misc:
   en: "Misc"
   zh: "杂项"
+snapshots:
+  en: "Status Snapshots"
+  zh: "状态快照"
