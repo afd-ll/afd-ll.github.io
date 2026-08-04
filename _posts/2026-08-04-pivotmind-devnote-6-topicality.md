@@ -67,12 +67,14 @@ With this cut, off-topic outputs like "time is big" basically vanish — **high-
 Relevance handles "relatedness"; we also need to bound "association range". The original diffusion was unbounded (walk wherever); changed to **bounded association**:
 
 ```
-hop limit: only 0.3-0.5 relevance hops allowed
+hop limit: only 1-2 hops allowed
 (input word → direct neighbor = 1 hop; neighbor's neighbor = 2 hops…)
-nodes beyond range, even if related, don't participate in output
+nodes beyond 2 hops, even if related, don't participate in output
 ```
 
-Why this odd "0.3-0.5 hops"? — **Relatedness decays.** Directly related words (weather→rain) are strong associations; two hops away (weather→rain→umbrella) is already weak association. Topicality demands hugging the topic; associating too far means drifting off-topic. Bounded association keeps output **talking about the input**, not scattering to the horizon.
+Note: the "1-2 hops" here and the "edge weight ≥ 0.3" in §2 are **two independent quantities** — 0.3 is the edge-weight threshold (the relevance gate: "related enough?"), 1-2 hops is the association range ("how far may we wander?"). Why limit to 1-2 hops? — **Relatedness decays.** Directly related words (weather→rain) are strong associations; two hops away (weather→rain→umbrella) is already weak association. Topicality demands hugging the topic; associating too far means drifting off-topic. Bounded association keeps output **talking about the input**, not scattering to the horizon.
+
+**A note on the anchor set implementation**: Chinese has no spaces, and PivotMind doesn't segment — the input is split character by character, then a 2-5 character sliding window queries the concept topology (word layer); **every word node hit becomes an anchor**. For "今天天气怎么样", the window yields "今天/天气/怎么" — all three enter the anchor set. Multi-word anchoring lets the anchor set naturally cover the input's core semantics.
 
 ## 4. Fix three: topic-ordered assembly (topic words first)
 
